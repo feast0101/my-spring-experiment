@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Dashboard</title>
+<script type="text/javascript">
+function displayData()
+{
+ var searchValue = document.getElementById("searchBox").value;
+if(searchValue != null){
+      var table = document.getElementById("sprintData");
+      var tableRow = table.getElementById(searchValue);
+      var tableCells = TableRow.getElementsByTagName("td");
+      
+      alert(""+tableCells[0].innerText+"");
+      
+      var body = document.getElementsByTagName("body");
+
+    var tbl     = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+
+    for (var j = 0; j < 1; j++) {
+        var row = document.createElement("tr");
+
+        for (var i = 0; i < 10; i++) {
+            var cell = document.createElement("td");
+            var cellText = document.createTextNode(""+tableCells[i].innerText+"");
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+        }
+        tblBody.appendChild(row);
+    }
+    tbl.appendChild(tblBody);
+    body.appendChild(tbl);
+    tbl.setAttribute("border", "2");
+  }
+}
+</script>
+</head>
+<body>
+      <center>
+            <h1>
+                  <b><u>SprintSheet</u></b>
+            </h1>
+      </center>
+      <div style="border: 1px; border: thin; border-bottom-style: solid;">
+
+            <table style="width: 100%">
+                  <tr>
+                        <td style="width: 20%"></td>
+                        <td style="width: 40%"><input id="searchBox" type="text"
+                              style="width: 100%;" value="Enter Story/bug no" width="150000px" /></td>
+                        <td><input value="search" name="search"
+                              type="button" onclick="displayData()" /></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+
+                  <tr>
+                        <td style="width: 20%"></td>
+                        <td style="width: 10%"><a href="">Advance Search</a></td>
+                        <td><a href="">DASHBOARD</a></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                                    </table>
+                        </td>
+                        <td style="width: 20%"></td>
+
+
+                  </tr>
+                  <tr><td colspan=3"><br></td></tr>
+
+            </table>
+      </div>
+
+
+<br>
+      <div>
+
+            <table id = "sprintData" cellspacing="10" 
+                  style="width: 100%; border-bottom-style: solid; border-color: black;">
+                  <tr>
+                        <td style="width: 20%"></td>
+                        <th><b>BugID/StoryID</b></th>
+                        <th><b>Resource</b></th>
+                        <th><b>Assigned Date</b></th>
+                        <th><b>Estimated hours</b></th>
+                        <th><b>Actual Hours</b></th>
+                        <th><b>Sprint</b></th>
+                        <th><b>Track</b></th>
+                        <th><b>Story/Bug</b></th>
+                        <th><b>Status</b></th>
+                        <th><b>GreenDotted Date</b></th>
+                        
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-2434">
+                        <td style="width: 20%"></td>
+                        <td>NP2-2434</td>
+                        <td>Amit Kumar</td>
+                        <td>12/6/2010</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>50</td>
+                        <td>Product</td>
+                        <td>Bug</td>
+                        <td>GD</td>
+                        <td>15/6/2010</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-8746">
+                        <td style="width: 20%"></td>
+                        <td>NP2-8746</td>
+                        <td>Rajeev Maurya</td>
+                        <td>8/12/2010</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>60</td>
+                        <td>Alert</td>
+                        <td>Bug</td>
+                        <td>On Hold</td>
+                        <td> </td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-6374"> 
+                        <td style="width: 20%"></td>
+                        <td>NP2-6374</td>
+                        <td>Harshit Gupta</td>
+                        <td>12/6/2011</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Bug Fix</td>
+                        <td>Bug</td>
+                        <td>In Progress</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-6553">
+                        <td style="width: 20%"></td>
+                        <td>NP2-6553</td>
+                        <td>Sujeet Kumar </td>
+                        <td>5/01/2011</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>70</td>
+                        <td>Product</td>
+                        <td>Story</td>
+                        <td>In Progress</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-6454">
+                        <td style="width: 20%"></td>
+                        <td>NP2-6454</td>
+                        <td>Amit Kumar </td>
+                        <td>18/08/2011 </td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Product</td>
+                        <td>Story</td>
+                        <td>In Progress</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-4356">
+                        <td style="width: 20%"></td>
+                        <td>NP2-4356</td>
+                        <td>Harshit Gupta</td>
+                        <td>18/12/2011</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Bug Fix</td>
+                        <td>Bug</td>
+                        <td>Rejected</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-8574">
+                        <td style="width: 20%"></td>
+                        <td>NP2-8574</td>
+                        <td>Rajeev Maurya</td>
+                        <td>23/10/2011</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Alert</td>
+                        <td>Story</td>
+                        <td>Rejected</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-8774">
+                        <td style="width: 20%"></td>
+                        <td>NP2-8774</td>
+                        <td>Ankit Sharma</td>
+                        <td>25/01/2011</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>60</td>
+                        <td>Alert</td>
+                        <td>Story</td>
+                        <td>In Progress</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-6834">
+                        <td style="width: 20%"></td>
+                        <td>NP2-6834</td>
+                        <td>Shah Fahad</td>
+                        <td>2/5/2010</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>50</td>
+                        <td>Bug Fix</td>
+                        <td>Bug</td>
+                        <td>GD</td>
+                        <td>10/5/2010</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-4903">
+                        <td style="width: 20%"></td>
+                      <td>NP2-4903</td>
+                        <td>Harshit Gupta</td>
+                        <td>22/10/2011</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Bug Fix</td>
+                        <td>Bug</td>
+                        <td>GD</td>
+                        <td>30/10/2011</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-882">
+                        <td style="width: 20%"></td>
+                        <td>NP2-882</td>
+                        <td>Amit Kumar </td>
+                        <td>21/9/2011 </td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Product</td>
+                        <td>Story</td>
+                        <td>GD</td>
+                        <td>30/9/2011 </td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-8739">
+                        <td style="width: 20%"></td>
+                        <td>NP2-8739</td>
+                        <td>Kallol Das</td>
+                        <td>5/11/2011</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>Product</td>
+                        <td>Story</td>
+                        <td>In Progress</td>
+                        <td></td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-8723">
+                        <td style="width: 20%"></td>
+                        <td>NP2-8723</td>
+                        <td>Anna</td>
+                        <td>26/10/2011</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>My Research</td>
+                        <td>Bug</td>
+                        <td>GD</td>
+                        <td>29/10/2011</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-3836">
+                        <td style="width: 20%"></td>
+                        <td>NP2-3836</td>
+                        <td>Shivani</td>
+                        <td>9/8/2010</td>
+                        <td>8</td>
+                        <td>0</td>
+                        <td>50</td>
+                        <td>My Research</td>
+                        <td>Story</td>
+                        <td>GD</td>
+                        <td>15/8/2010</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-6563">
+                        <td style="width: 20%"></td>
+                        <td>NP2-6563</td>
+                        <td>Ankit Sharma</td>
+                        <td>14/11/2010</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>50</td>
+                        <td>Alert</td>
+                        <td>Bug</td>
+                        <td>GD</td>
+                        <td>18/11/2010</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+                  <tr id = "NP2-7454">
+                        <td style="width: 20%"></td>
+                        <td>NP2-7454</td>
+                        <td>Anna</td>
+                        <td>4/3/2011</td>
+                        <td>16</td>
+                        <td>0</td>
+                        <td>60</td>
+                        <td>My Research</td>
+                        <td>Story</td>
+                        <td>GD</td>
+                        <td>10/3/2011</td>
+                        <td style="width: 20%"></td>
+                  </tr>
+            </table>
+      </div>
+</body>
+</html>
