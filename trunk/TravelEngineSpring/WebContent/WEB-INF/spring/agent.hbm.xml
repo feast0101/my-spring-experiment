@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.travel.model.Agent" table="agent" catalog="springapp">
+        <id name="agentCode" type="java.lang.int">
+            <column name="Agent_Code" />
+            <generator class="identity" />
+        </id>
+        <property name="agentFn" type="string">
+            <column name="Agent_FN" length="10" not-null="true" unique="true" />
+        </property>
+        <property name="agentLn" type="string">
+            <column name="Agent_LN" length="20" not-null="true" unique="true" />
+        </property>
+         <property name="password" type="string">
+            <column name="Password" length="20" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>
